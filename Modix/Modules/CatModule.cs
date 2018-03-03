@@ -30,6 +30,12 @@
             // It can take a Media type parameter however the command has to be !cat picture or !cat gif all of the time. 
             // If !cat is used, it says too few parameters passed and fails. 
             // I want to retain !cat functionality. 
+            // Attempt at making an optional parameter where cat commands can have an optional parameter to have content
+            // in relation to the parameter. Proposed new param is: !cat [param1] [param2]
+            // param1 = something you want your cat picture to come with. '!cat wet' would return an image of a cat
+            //          tagged with wet
+            // param2 = null -> just return an img, gif -> return a gif
+            // Never mind, I'm gonna need to change services to use thecatapi.com if I want these changes to be used
             if (string.IsNullOrWhiteSpace(param))
             {
                 _mediaType = Media.Picture;
