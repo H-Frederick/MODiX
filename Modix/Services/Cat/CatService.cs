@@ -69,7 +69,7 @@
         private static async Task<string> DownloadCatJson(CancellationToken token)
         {
             var json = string.Empty;
-
+            
             try
             {
                 using (var response = await Client.GetAsync("http://random.cat/meow", token))
